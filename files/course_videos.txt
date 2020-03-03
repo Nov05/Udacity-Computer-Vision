@@ -1,0 +1,38 @@
+﻿
+# Core Curriculum
+1. Introdcution to Computer Vision   
+2. Optional: Cloud Computing   
+3. Advanced Computer Vision & Deep Learning   
+4. Object Tracking and Localization   
+
+# Extracurricular  
+1. Application of Computer Vision and Deep Learning   
+2. Review: Training A Neural Network   
+3. Skin Cancer Detection   
+4. Text Sentiment Analysis   
+5. More Deep Learning Models
+6. C++ Programming
+
+## 1. Introduction to Computer Vision    
+1.1. Welcome to the Computer Vision Nanodegree Program    
+https://youtu.be/9s-gm2ZvODI    
+1.2. Computer Vision in Industry    
+https://youtu.be/_8be3GdqfqU    
+1.3. Course Outline   
+https://youtu.be/INMNyJGB2DI   
+1.4. Projects and Topics    
+The three project in this program are as follows:    
+```
+Facial Keypoint Detection
+Automatic Image Captioning
+Simultaneous Localization and Mapping (SLAM).
+```
+1.5 Partnership with Industry    
+https://youtu.be/wm1aZZvF6Is    
+[NVIDIA Developer Program](https://developer.nvidia.com/developer-program)    
+
+
+
+
+
+ 
