@@ -1,5 +1,7 @@
 # CVND---Image-Captioning-Project
 
+<img src='https://github.com/Nov05/Udacity-Computer-Vision/blob/master/images/image-captioning.png?raw=true'>
+
 # Instructions  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  
 ```
