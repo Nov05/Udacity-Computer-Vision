@@ -62,10 +62,9 @@ class DecoderRNN(nn.Module):
     def forward(self, features, captions):
         # shape of features: torch.Size([10, 256])
         # shape of captions: torch.Size([10, 13])
-        batch_size, _ = features.size() # [batch_size, embed_size]
-        sequence_size = captions.shape[1]
+        batch_size, sequence_size = captions.size() # [batch_size, sequence_size]
 
-        # input shape: [sequence_size, batch_size, input_size]
+        # LSTM input shape: [sequence_size, batch_size, input_size]
         _, self.hidden = self.lstm(features.view(1, batch_size, -1))
        
         # Embed the target sequence, which has been shifted right by one
