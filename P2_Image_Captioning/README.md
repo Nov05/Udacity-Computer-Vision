@@ -1,9 +1,11 @@
 # CVND---Image-Captioning-Project
 
-Project forked from https://github.com/udacity/CVND---Image-Captioning-Project   
-Project Colab Folder https://drive.google.com/open?id=1dsI_4ryt1-EruzDZC4pQkZh8rFFAfSf2   
-
 <img src='https://github.com/Nov05/Udacity-Computer-Vision/blob/master/images/image-captioning.png?raw=true'>
+
+Project forked from     
+https://github.com/udacity/CVND---Image-Captioning-Project   
+Project Colab Folder     
+https://drive.google.com/open?id=1dsI_4ryt1-EruzDZC4pQkZh8rFFAfSf2   
 
 # Instructions  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  

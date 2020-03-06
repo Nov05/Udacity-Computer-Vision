@@ -12,7 +12,7 @@ class EncoderCNN(nn.Module):
         for param in resnet.parameters():
             param.requires_grad_(False)
         
-        # remove the last layer
+        # remove the top fully connected layer
         modules = list(resnet.children())[:-1]
         self.resnet = nn.Sequential(*modules)
         self.embed = nn.Linear(resnet.fc.in_features, embed_size)
@@ -20,7 +20,7 @@ class EncoderCNN(nn.Module):
     def forward(self, images):
         features = self.resnet(images)
         features = features.view(features.size(0), -1)
-        features = self.embed(features)
+        features = self.embed(features) # [batch size, embed size]
         return features
 
 
@@ -30,7 +30,7 @@ class DecoderRNN(nn.Module):
 
         self.hidden_size = hidden_size
 
-        # The decoder will embed the inputs before feeding them to the LSTM
+        # The decoder will embed the inputs before feeding them to the LSTM.
         self.embedding = nn.Embedding(
             num_embeddings=vocab_size,
             embedding_dim=embed_size,
@@ -55,17 +55,17 @@ class DecoderRNN(nn.Module):
         ''' At the start of training, we need to initialize a hidden state;
            there will be none because the hidden state is formed based on perviously seen data.
            So, this function defines a hidden state with all zeroes and of a specified size.'''
-        # The axes dimensions are (n_layers, batch_size, hidden_dim)
+        # The axes dimensions are [n_layers, batch_size, hidden_size]
         return (torch.zeros(1, 1, self.hidden_size),
                 torch.zeros(1, 1, self.hidden_size))
 
     def forward(self, features, captions):
         # shape of features: torch.Size([10, 256])
         # shape of captions: torch.Size([10, 13])
-        batch_size, _ = features.size() # batch size, embed size
+        batch_size, _ = features.size() # [batch_size, embed_size]
         sequence_size = captions.shape[1]
 
-        # input shape: sequence_size, batch_size, input_size
+        # input shape: [sequence_size, batch_size, input_size]
         _, self.hidden = self.lstm(features.view(1, batch_size, -1))
        
         # Embed the target sequence, which has been shifted right by one
