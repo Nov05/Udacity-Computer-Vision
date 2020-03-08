@@ -32,3 +32,7 @@ cd ..
   * **2014 Test images [41K/6GB]** (extract the test2014 folder and place at location cocoapi/images/test2014/)
 
 4. The project is structured as a series of Jupyter notebooks that are designed to be completed in sequential order (`0_Dataset.ipynb, 1_Preliminaries.ipynb, 2_Training.ipynb, 3_Inference.ipynb`).
+
+# Solution
+
+1. Model.py - https://gist.github.com/Nov05/15e45187d1cd151ab02b2f438c9b1fe6
